@@ -1,4 +1,14 @@
-/* RESET */
+
+:root {
+  --primary: #141a3a;      
+  --accent: #8b0000;       
+  --highlight: #5e4bff;    
+  --light: #ffffff;
+  --gray: #f1f1f1;
+  --border: #cccccc;
+  --radius: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +18,7 @@
 
 /* NAVBAR */
 .navbar {
-  background: #141a3a;
+  background: var(--primary);
   color: white;
   padding: 14px 30px;
   display: flex;
@@ -40,7 +50,7 @@
   content: "";
   width: 0;
   height: 3px;
-  background: #5e4bff;
+  background: var(--highlight);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -76,7 +86,12 @@
   padding: 10px;
   width: 260px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s ease;
+}
+
+.filter-section input:focus {
+  box-shadow: 0 0 0 3px rgba(94, 75, 255, 0.3);
 }
 
 /* CONTENT */
@@ -88,7 +103,7 @@
 }
 
 /* PROGRAM CARD */
-.program {
+.card {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 30px;
@@ -96,24 +111,25 @@
 }
 
 /* IMAGE */
-.program img {
+.card img {
   width: 100%;
   border-radius: 10px;
 }
 
 /* PROGRAM INFO */
-.program-info {
-  background: #8b0000;
+.card-info {
+  background: var(--accent);
   color: white;
   padding: 22px;
-  border-radius: 10px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.program-info h2 {
+.card-info h2 {
   margin-bottom: 10px;
 }
 
-.program-info p {
+.card-info p {
   line-height: 1.5;
 }
 
@@ -122,8 +138,8 @@
   margin-top: 14px;
   padding: 9px 18px;
   border: none;
-  background: #ffffff;
-  color: #8b0000;
+  background: var(--accent);
+  color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 6px;
@@ -133,8 +149,8 @@
 .toggle-btn:hover {
   transform: translateY(-2px);
   background: #f1f1f1;
+  color: black; /* ADD THIS */
 }
-
 .details {
   margin-top: 12px;
 }
@@ -147,14 +163,14 @@
 footer {
   margin-top: 40px;
   padding: 20px;
-  background: #141a3a;
+  background: var(--primary);
   color: white;
   text-align: center;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .program {
+  .card {
     grid-template-columns: 1fr;
   }
 
