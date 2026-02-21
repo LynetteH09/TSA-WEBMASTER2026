@@ -106,37 +106,146 @@
   gap: 30px;
 }
 
-/* PROGRAM CARD */
-.card {
+/* PROGRAMS PAGE */
+.prog-header {
+  text-align: left; 
+}
+
+.prog-controls {
+  padding: 15px 30px 10px;
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 220px auto;
+  gap: 12px;
   align-items: center;
 }
 
-/* IMAGE */
-.card img {
+.prog-controls input {
   width: 100%;
-  border-radius: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
 }
 
-/* PROGRAM INFO */
-.card-info {
-  background: var(--accent);
-  color: white;
-  padding: 22px;
+.prog-controls input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(94, 75, 255, 0.3);
+}
+
+.prog-controls select {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+}
+
+.prog-count {
+  color: #555;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.prog-section {
+  padding: 25px 30px 10px;
+}
+
+.section-head {
+  margin-bottom: 14px;
+}
+
+.section-head h2 {
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.section-head p {
+  color: #555;
+  font-size: 14px;
+}
+
+.prog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+/* New card class so it doesn't conflict with your old .card */
+.prog-card {
+  background: white;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
 }
 
-.card-info h2 {
+.prog-card:hover {
+  transform: translateY(-4px);
+}
+
+.prog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: var(--gray);
+}
+
+.prog-body {
+  padding: 16px;
+}
+
+.prog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.prog-top h3 {
+  color: var(--primary);
+}
+
+.prog-pill {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(94, 75, 255, 0.10);
+  color: var(--highlight);
+  border: 1px solid rgba(94, 75, 255, 0.25);
+}
+
+.prog-summary {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.45;
   margin-bottom: 10px;
 }
 
-.card-info p {
-  line-height: 1.5;
+.prog-meta {
+  margin-top: 10px;
+  padding-left: 18px;
+  line-height: 1.6;
+  color: #444;
+  font-size: 12px;
 }
 
+/* Accessibility helper */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+@media (max-width: 900px) {
+  .prog-controls {
+    grid-template-columns: 1fr;
+  }
+  .prog-count {
+    margin-top: 4px;
+  }
+}
 /* BUTTON */
 .toggle-btn {
   margin-top: 14px;

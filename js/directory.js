@@ -9,7 +9,7 @@ const resources = [
     address: "2525 Cullen St., Fort Worth, TX 76107",
     phone: "817-857-7100",
     website: "https://tafb.org/",
-    image: "assets/dir-food.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Food pantry referrals", "Food distribution", "Find Food map"]
   },
   {
@@ -20,7 +20,7 @@ const resources = [
     address: "1321 E Lancaster Ave, Fort Worth, TX 76102",
     phone: "817-339-2553",
     website: "https://ugm-tc.org/",
-    image: "assets/dir-shelter.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Emergency shelter", "Meals", "Support services"]
   },
   {
@@ -31,7 +31,7 @@ const resources = [
     address: "249 W Thornhill Dr., Fort Worth, TX 76115",
     phone: "817-534-0814",
     website: "https://catholiccharitiesfortworth.org/",
-    image: "assets/dir-family.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Family support", "Case management", "Stability resources"]
   },
   {
@@ -42,7 +42,7 @@ const resources = [
     address: "Fort Worth service locations available (see website)",
     phone: "817-335-3022 (Services) / 800-866-2465 (Crisis)",
     website: "https://mhmrtarrant.org/",
-    image: "assets/dir-mentalhealth.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Mental health services", "Crisis support", "Referrals"]
   },
   {
@@ -53,7 +53,7 @@ const resources = [
     address: "2400 Cypress St, Fort Worth, TX 76102",
     phone: "817-632-7400",
     website: "https://www.journeyhome.org/",
-    image: "assets/dir-housing.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Shelter services", "Resource connection", "Support programs"]
   },
   {
@@ -64,7 +64,7 @@ const resources = [
     address: "1407 Texas St, Fort Worth, TX 76102",
     phone: "817-333-3400",
     website: "https://fwhs.org/",
-    image: "assets/dir-publichousing.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Public housing", "Housing assistance", "Resident services"]
   },
   {
@@ -75,7 +75,7 @@ const resources = [
     address: "1400 Circle Dr, Fort Worth, TX 76119",
     phone: "817-413-4000",
     website: "https://workforcesolutions.net/",
-    image: "assets/dir-employment.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Job search", "Career counseling", "Workforce centers"]
   },
   {
@@ -86,7 +86,7 @@ const resources = [
     address: "4200 Airport Fwy, Fort Worth, TX 76117",
     phone: "817-332-7866",
     website: "https://goodwillnorthcentraltexas.org/",
-    image: "assets/dir-goodwill.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Job training", "Employment support", "Community programs"]
   },
   {
@@ -97,7 +97,7 @@ const resources = [
     address: "1500 S Main St, Fort Worth, TX 76104",
     phone: "817-702-3431",
     website: "https://www.jpshealthnet.org/",
-    image: "assets/dir-health.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Healthcare services", "Clinics", "Patient support"]
   },
   {
@@ -108,7 +108,7 @@ const resources = [
     address: "Multiple locations (see website)",
     phone: "817-248-6299 (Call Center) / 817-321-5400 (WIC)",
     website: "https://www.tarrantcountytx.gov/en/public-health.html",
-    image: "assets/dir-publichealth.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Public health info", "Appointments", "WIC"]
   },
   {
@@ -119,7 +119,7 @@ const resources = [
     address: "Multiple library locations in Fort Worth",
     phone: "See location directory on website",
     website: "https://www.fortworthtexas.gov/departments/library/programs/job-skills",
-    image: "assets/dir-library.jpg",
+    image: "TSA-WEBMASTER2026/assets/images/placeholder.jpg",
     services: ["Job skills", "Workforce prep", "Learning tools"]
   }
 ];
