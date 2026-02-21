@@ -117,7 +117,6 @@ body {
   background-color: #b71c1c;
 }
 
-/* LIST STYLING */
 .two-column {
   columns: 2;
   column-gap: 40px;
@@ -140,7 +139,6 @@ body {
   text-decoration: underline;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -148,7 +146,6 @@ footer {
   color: white;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .two-column {
     columns: 1;
