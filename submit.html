@@ -1,68 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Submit a Resource</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit a Resource | Harmony Community Hub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/stylesv2.css" />
 </head>
 <body>
 
-    <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Community Connect</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="prog.html">Programs</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="business.html">Businesses</a></li>
-      <li><a href="citations.html">References</a></li>
-      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
+  <header class="subpage-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo dark-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Harmony Community Hub</span>
+      </a>
 
-    </ul>
-  </nav>
+      <button class="menu-toggle dark-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Submit a Community Resource</h1>
-    <p>Help us expand our database of verified local services.</p>
-  </section>
+      <ul class="nav-links subpage-nav" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="prog.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="business.html">Businesses</a></li>
+        <li><a href="citations.html">References</a></li>
+        <li><a class="btn nav-btn" href="submit.html">Submit a Resource</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- FORM SECTION -->
-  <section class="content">
-    <div class="submit-card">
-
-      <form id="resourceForm">
-
-        <label>Organization Name</label>
-        <input type="text" required>
-
-        <label>Category</label>
-        <input type="text" required>
-
-        <label>Description</label>
-        <textarea required></textarea>
-
-        <label>Website / Contact Information</label>
-        <input type="text">
-
-        <button type="submit" class="toggle-btn">
-          Submit Resource
-        </button>
-
-      </form>
-
-      <p id="successMessage" class="hidden success-msg">
-        Thank you! Your submission has been received.
+  <section class="sub-hero">
+    <div class="container">
+      <p class="eyebrow">Community Contribution Form</p>
+      <h1>Submit a Resource</h1>
+      <p class="sub-hero-text">
+        Help us grow the directory by sharing trusted programs, events, businesses,
+        volunteer opportunities, or other community resources in the Fort Worth area.
       </p>
-
     </div>
   </section>
 
-  <footer>
-    &copy; 2026 Community Connect
+  <main class="submit-section">
+    <div class="container">
+      <div class="submit-layout">
+
+        <aside class="submit-info-card">
+          <h2>Before You Submit</h2>
+          <ul class="submit-guidelines">
+            <li>Please share resources that are relevant to the Fort Worth community.</li>
+            <li>Include accurate names, working links, and clear descriptions.</li>
+            <li>Submissions may be reviewed before being added to the site.</li>
+            <li>Avoid duplicate entries when possible.</li>
+          </ul>
+
+          <div class="submit-note-box">
+            <h3>Accepted Resource Types</h3>
+            <div class="submit-chip-row">
+              <span class="submit-chip">Programs</span>
+              <span class="submit-chip">Volunteer</span>
+              <span class="submit-chip">Events</span>
+              <span class="submit-chip">Businesses</span>
+              <span class="submit-chip">Support Services</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="submit-card">
+          <div class="submit-card-head">
+            <h2>Resource Submission Form</h2>
+            <p>Complete the fields below to suggest a new resource.</p>
+          </div>
+
+          <form id="resourceForm" novalidate>
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="orgName">Organization or Resource Name <span>*</span></label>
+                <input type="text" id="orgName" name="orgName" required />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="resourceType">Resource Type <span>*</span></label>
+                <select id="resourceType" name="resourceType" required>
+                  <option value="">Select a type</option>
+                  <option value="Program">Program</option>
+                  <option value="Volunteer Opportunity">Volunteer Opportunity</option>
+                  <option value="Event">Event</option>
+                  <option value="Business">Business</option>
+                  <option value="Support Service">Support Service</option>
+                  <option value="Other">Other</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="category">Category <span>*</span></label>
+                <input
+                  type="text"
+                  id="category"
+                  name="category"
+                  placeholder="Example: STEM, Food Assistance, Youth Sports, Local Business"
+                  required
+                />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="ageGroup">Target Age Group</label>
+                <select id="ageGroup" name="ageGroup">
+                  <option value="">Select an age group</option>
+                  <option value="Elementary">Elementary</option>
+                  <option value="Teen">Teen</option>
+                  <option value="Adult">Adult</option>
+                  <option value="Senior">Senior</option>
+                  <option value="All Ages">All Ages</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="description">Description <span>*</span></label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="5"
+                  placeholder="Describe what this resource offers, who it serves, and why it would be helpful to include."
+                  required
+                ></textarea>
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="location">Location / Area</label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Example: Fort Worth, Near Southside, Stockyards"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact">Website or Contact Link</label>
+                <input
+                  type="url"
+                  id="contact"
+                  name="contact"
+                  placeholder="https://example.org"
+                />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="submitterName">Your Name</label>
+                <input
+                  type="text"
+                  id="submitterName"
+                  name="submitterName"
+                  placeholder="Optional"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="submitterEmail">Your Email</label>
+                <input
+                  type="email"
+                  id="submitterEmail"
+                  name="submitterEmail"
+                  placeholder="Optional"
+                />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="checkbox-row">
+                  <input type="checkbox" id="verifyCheck" required />
+                  <span>I confirm that this submission is accurate to the best of my knowledge. <span class="required-star">*</span></span>
+                </label>
+                <small class="error-message checkbox-error"></small>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary-btn">Submit Resource</button>
+              <button type="reset" class="btn submit-reset-btn">Clear Form</button>
+            </div>
+          </form>
+
+          <div id="successMessage" class="success-msg hidden" role="status" aria-live="polite">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Thank you!</strong>
+              <p>Your submission has been received successfully.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p><i class="fa-regular fa-envelope"></i> community@harmonyhub.org</p>
+        <p><i class="fa-solid fa-phone"></i> (817) 555-0147</p>
+      </div>
+
+      <div>
+        <h3>Follow Along</h3>
+        <p><i class="fa-brands fa-instagram"></i> @harmonycommunityhub</p>
+        <p><i class="fa-brands fa-facebook"></i> Harmony Community Hub</p>
+      </div>
+
+      <div>
+        <h3>Submission Review</h3>
+        <p>Entries may be reviewed for relevance, accuracy, and fit before being published to the site.</p>
+      </div>
+    </div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script src="js/form.js"></script>
 </body>
 </html>

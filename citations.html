@@ -1,95 +1,407 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>References | Harmony Community</title>
-  <link rel="stylesheet" href="css/reference.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>References | Harmony Community Hub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/stylesv2.css" />
 </head>
 <body>
 
-    <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Community Connect</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="prog.html">Programs</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="business.html">Businesses</a></li>
-      <li><a href="citations.html">References</a></li>
-      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
+  <header class="subpage-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo dark-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Harmony Community Hub</span>
+      </a>
 
-    </ul>
-  </nav>
+      <button class="menu-toggle dark-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  <!-- PAGE TITLE -->
-  <header class="page-header">
-    <h1>References</h1>
+      <ul class="nav-links subpage-nav" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="prog.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="business.html">Businesses</a></li>
+        <li><a class="active" href="citations.html">References</a></li>
+        <li><a href="submit.html" class="btn nav-btn">Submit a Resource</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="references-container">
-
-    <!-- TOP SECTION -->
-    <section class="top-grid">
-
-      <!-- WORK LOG -->
-      <div class="card">
-        <h2>Work Log</h2>
-        <iframe src="TSA-WEBMASTER2026\assets\documents\worklog.pdf" class="pdf-viewer"></iframe>
-        <a href="TSA-WEBMASTER2026\assets\documents\worklog.pdf" download class="btn">
-          Download Work Log
-        </a>
-      </div>
-
-      <!-- COPYRIGHT -->
-      <div class="card">
-        <h2>Copyright Checklist</h2>
-        <iframe src="TSA-WEBMASTER2026\assets\documents\copyright_checklist.pdf" class="pdf-viewer"></iframe>
-        <a href="TSA-WEBMASTER2026\assets\documents\copyright_checklist.pdf" download class="btn">
-          Download Checklist
-        </a>
-      </div>
-
-    </section>
-
-    <!-- CODE STACK -->
-    <section class="card full-width">
-      <h2>Code Stack</h2>
-      <p>
-        This website was developed using HTML, CSS, and JavaScript and deployed on Vercel. 
-        The layout is fully responsive and optimized for performance. Accessibility best practices 
-        were implemented using semantic HTML and structured navigation.
+  <section class="sub-hero">
+    <div class="container">
+      <p class="eyebrow">Documentation & Credits</p>
+      <h1>References</h1>
+      <p class="sub-hero-text">
+        This page documents the project’s research sources, code stack, tools, and required supporting materials.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- LIBRARIES -->
-    <section class="card full-width">
-      <h2>Additional Libraries Utilized</h2>
-      <ul class="two-column">
-        <li>Font Awesome – icon library</li>
-        <li>Google Fonts – typography</li>
-        <li>Vercel – hosting and deployment</li>
-        <li>Unsplash – royalty-free images</li>
-        <li>W3C Validator – accessibility testing</li>
-        <li>Wave Accessibility Tool – compliance testing</li>
-      </ul>
-    </section>
+  <main class="references-section">
+    <div class="container">
 
-    <!-- IMAGE LINKS -->
-    <section class="card full-width">
-      <h2>Image Credits</h2>
-      <ul class="links">
-        <li><a href="#" target="_blank">Unsplash Image 1</a></li>
-        <li><a href="#" target="_blank">Unsplash Image 2</a></li>
-        <li><a href="#" target="_blank">Creative Commons Image 3</a></li>
-      </ul>
-    </section>
+      <!-- TOP BOXES -->
+      <section class="ref-top-grid">
+        <article class="ref-card">
+          <div class="ref-card-head">
+            <h2>Work Log</h2>
+            <span class="ref-badge">Project Documentation</span>
+          </div>
 
+          <iframe
+            src="documents/worklog.pdf"
+            class="pdf-viewer"
+            title="Work Log PDF">
+          </iframe>
+
+          <div class="ref-actions">
+            <a href="documents/worklog.pdf" class="business-link primary" download>
+              Download Work Log
+            </a>
+          </div>
+        </article>
+
+        <article class="ref-card">
+          <div class="ref-card-head">
+            <h2>Copyright Checklist</h2>
+            <span class="ref-badge">Competition Requirement</span>
+          </div>
+
+          <iframe
+            src="documents/copyright_checklist.pdf"
+            class="pdf-viewer"
+            title="Copyright Checklist PDF">
+          </iframe>
+
+          <div class="ref-actions">
+            <a href="documents/copyright_checklist.pdf" class="business-link primary" download>
+              Download Checklist
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- STACK -->
+      <section class="ref-card full-width-card">
+        <div class="ref-card-head">
+          <h2>Code Stack</h2>
+          <span class="ref-badge">Technical Summary</span>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-item">
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, and JavaScript were used to build the full website interface, layout, filtering systems, calendar logic, and responsive page interactions.</p>
+          </div>
+
+          <div class="stack-item">
+            <h3>Design Approach</h3>
+            <p>The site uses responsive layouts, semantic HTML structure, reusable theme styling, section-based organization, and accessible navigation patterns.</p>
+          </div>
+
+          <div class="stack-item">
+            <h3>Deployment</h3>
+            <p>The project is structured for static-site deployment and can be hosted on platforms such as Vercel or GitHub Pages using a simple HTML/CSS/JS file structure.</p>
+          </div>
+
+          <div class="stack-item">
+            <h3>Features Implemented</h3>
+            <p>Interactive program and business filters, event calendar rendering, search tools, category tags, mobile navigation, downloadable documentation, and external resource linking.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIBRARIES / TOOLS -->
+      <section class="ref-card full-width-card">
+        <div class="ref-card-head">
+          <h2>Additional Libraries, Platforms, and Tools</h2>
+          <span class="ref-badge">Development Resources</span>
+        </div>
+
+        <div class="tool-grid">
+          <div class="tool-box">
+            <h3>Libraries</h3>
+            <p>Font Awesome</p>
+            <p>Google Fonts</p>
+          </div>
+
+          <div class="tool-box">
+            <h3>Platforms</h3>
+            <p>Vercel or GitHub Pages for hosting</p>
+            <p>VS Code for development</p>
+            <p>Live Server for local testing</p>
+          </div>
+
+          <div class="tool-box">
+            <h3>Testing / Validation</h3>
+            <p>W3C HTML Validator</p>
+            <p>W3C CSS Validator</p>
+            <p>WAVE Accessibility Evaluation Tool</p>
+          </div>
+
+          <div class="tool-box">
+            <h3>File Types Used</h3>
+            <p>.html</p>
+            <p>.css</p>
+            <p>.js</p>
+            <p>.jpg / .png</p>
+            <p>.pdf</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTERS -->
+      <section class="reference-filter-bar">
+        <button class="ref-filter active" data-filter="all">All Sources</button>
+        <button class="ref-filter" data-filter="programs">Programs</button>
+        <button class="ref-filter" data-filter="events">Events</button>
+        <button class="ref-filter" data-filter="businesses">Businesses</button>
+        <button class="ref-filter" data-filter="technical">Technical</button>
+        <button class="ref-filter" data-filter="images">Images</button>
+      </section>
+
+      <!-- SOURCES -->
+      <section class="reference-list">
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Fort Worth Public Library: Adult Programs & Services</h3>
+          <p>Used for adult programming references and public library offerings.</p>
+          <a href="https://www.fortworthtexas.gov/departments/library/programs/4-adults" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Fort Worth Public Library: Clubs for Adults</h3>
+          <p>Used for adult club and community-learning examples.</p>
+          <a href="https://www.fortworthtexas.gov/departments/library/programs/adult-clubs" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Fort Worth Public Library: Main Programs Directory</h3>
+          <p>Used for general public library programming and local opportunity references.</p>
+          <a href="https://www.fortworthtexas.gov/departments/library/programs" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>YMCA of Metropolitan Fort Worth: Youth Sports</h3>
+          <p>Used for youth sports program references in the programs directory.</p>
+          <a href="https://ymcafw.org/youth-sports/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>YMCA of Fort Worth: Healthy Living & Programs</h3>
+          <p>Used for adult wellness, general YMCA activity, and community program references.</p>
+          <a href="https://ymcafw.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Sigma Swim: Official Swim Programs</h3>
+          <p>Used for swim lesson and aquatic program references.</p>
+          <a href="https://www.sigmaswim.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Fort Worth Parks & Aquatics: Swimming Lessons</h3>
+          <p>Used for Fort Worth-area swim lesson references connected to Sigma Swim programming.</p>
+          <a href="https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/swimming-lessons" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Fort Worth Museum of Science and History</h3>
+          <p>Used for museum-based educational and STEM learning references.</p>
+          <a href="https://www.fwmuseum.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Fort Worth Museum of Science and History: Museum School / Summer Programs</h3>
+          <p>Used for children’s workshop and educational program examples.</p>
+          <a href="https://www.fwmuseum.org/learn/museum-school/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="programs">
+          <div class="reference-category">Programs</div>
+          <h3>Amon Carter Museum: Second Thursdays</h3>
+          <p>Used for arts-related event/program references.</p>
+          <a href="https://www.cartermuseum.org/events/public-programs/second-thursdays" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>Fort Worth Annual Events Directory</h3>
+          <p>Used for citywide event and festival references including Mayfest, Charles Schwab Challenge, Juneteenth, Fort Worth Fourth, and Oktoberfest listings.</p>
+          <a href="https://www.fortworth.com/events/annual-events/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>Fort Worth Herd: Official Cattle Drive</h3>
+          <p>Used for Fort Worth Herd and Stockyards event references.</p>
+          <a href="https://www.fortworth.com/the-herd/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>Fort Worth Stockyards: Fort Worth Herd Cattle Drive</h3>
+          <p>Used for additional Stockyards cattle drive scheduling and attraction details.</p>
+          <a href="https://www.fortworthstockyards.org/events/fort-worth-herd-twice-daily-cattle-drive" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>Fort Worth Stock Show & Rodeo</h3>
+          <p>Used for Stock Show and Rodeo references in the calendar.</p>
+          <a href="https://www.fwssr.com/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>MAIN ST. Fort Worth Arts Festival</h3>
+          <p>Used for annual arts festival references.</p>
+          <a href="https://mainstreetartsfest.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>Mayfest Fort Worth</h3>
+          <p>Used for annual festival references.</p>
+          <a href="https://mayfest.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="events">
+          <div class="reference-category">Events</div>
+          <h3>Fort Worth Oktoberfest</h3>
+          <p>Used for annual fall festival references.</p>
+          <a href="https://fortworthoktoberfest.com/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="businesses">
+          <div class="reference-category">Businesses</div>
+          <h3>Mariscos El Cachanilla</h3>
+          <p>Used for local business information and location reference.</p>
+          <a href="https://www.facebook.com/mariscos.el.cachanillaa/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="businesses">
+          <div class="reference-category">Businesses</div>
+          <h3>Big Dawgs Hot Dog Co.</h3>
+          <p>Used for local business information and official website linking.</p>
+          <a href="https://bigdawgsdfw.com/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="businesses">
+          <div class="reference-category">Businesses</div>
+          <h3>Danibelle's Lebanese Cuisine</h3>
+          <p>Used for food truck listing reference.</p>
+          <a href="https://roaminghunger.com/danibelles-lebanese-cuisine/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="businesses">
+          <div class="reference-category">Businesses</div>
+          <h3>Leaves Bakery and Books / Leaves Book and Tea Shop</h3>
+          <p>Used for business description and location reference.</p>
+          <a href="https://leaves-bakery-and-books.company.site/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="businesses">
+          <div class="reference-category">Businesses</div>
+          <h3>Fort Worth Tourism Listing — Leaves Books and Tea Shop</h3>
+          <p>Used for secondary verification of business location and listing information.</p>
+          <a href="https://www.fortworth.com/listing/leaves-books-and-tea-shop/8303/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="technical">
+          <div class="reference-category">Technical</div>
+          <h3>Font Awesome</h3>
+          <p>Used for icons throughout the site interface.</p>
+          <a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="technical">
+          <div class="reference-category">Technical</div>
+          <h3>Google Fonts</h3>
+          <p>Used for typography, including Bebas Neue and Inter.</p>
+          <a href="https://fonts.google.com/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="technical">
+          <div class="reference-category">Technical</div>
+          <h3>W3C Markup Validation Service</h3>
+          <p>Used for HTML validation and standards checking.</p>
+          <a href="https://validator.w3.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="technical">
+          <div class="reference-category">Technical</div>
+          <h3>W3C CSS Validation Service</h3>
+          <p>Used for stylesheet validation and standards checking.</p>
+          <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="technical">
+          <div class="reference-category">Technical</div>
+          <h3>WAVE Web Accessibility Evaluation Tool</h3>
+          <p>Used for accessibility review and improvement.</p>
+          <a href="https://wave.webaim.org/" target="_blank" rel="noreferrer">Open Source</a>
+        </article>
+
+        <article class="reference-entry" data-category="images">
+          <div class="reference-category">Images</div>
+          <h3>Image Credits</h3>
+          <p>
+            Will be replaced with the exact public links for every stock or third-party image used.
+          </p>
+          <a href="#" target="_blank" rel="noreferrer">Add Image Source Links Here</a>
+        </article>
+
+      </section>
+    </div>
   </main>
 
-  <footer>
-    © 2026 Harmony Community | TSA Webmaster Project
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p><i class="fa-regular fa-envelope"></i> community@harmonyhub.org</p>
+        <p><i class="fa-solid fa-phone"></i> (817) 555-0147</p>
+      </div>
+
+      <div>
+        <h3>Follow Along</h3>
+        <p><i class="fa-brands fa-instagram"></i> @harmonycommunityhub</p>
+        <p><i class="fa-brands fa-facebook"></i> Harmony Community Hub</p>
+      </div>
+
+      <div>
+        <h3>TSA Webmaster Project</h3>
+        <p>This page records sources, tools, documentation, and supporting materials used throughout the project.</p>
+      </div>
+    </div>
   </footer>
 
+  <script src="js/script.js"></script>
+  <script src="js/citations.js"></script>
 </body>
 </html>

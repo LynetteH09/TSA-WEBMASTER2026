@@ -3,190 +3,461 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community Programs | Community Connect</title>
+  <title>Programs | Harmony Community Hub</title>
 
-  <!-- Use forward slashes -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/stylesv2.css" />
 </head>
-
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Community Connect</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="prog.html">Programs</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="business.html">Businesses</a></li>
-      <li><a href="citations.html">References</a></li>
-      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
-    </ul>
-  </nav>
-
   <!-- HEADER -->
-  <section class="page-header prog-header">
-    <h1>Community Programs</h1>
-    <p>Search and explore programs for kids and teens.</p>
-  </section>
+  <header class="subpage-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo dark-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Harmony Community Hub</span>
+      </a>
 
-  <!-- FILTER BAR -->
-  <section class="prog-controls">
-    <div class="prog-search">
-      <label class="sr-only" for="search">Search Programs</label>
-      <input type="text" id="search" placeholder="Search by program name or keywords..." />
-    </div>
+      <button class="menu-toggle dark-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <div class="prog-select">
-      <label class="sr-only" for="ageFilter">Age Group Filter</label>
-      <select id="ageFilter">
-        <option value="all">All Ages</option>
-        <option value="kids">Kids 5–10</option>
-        <option value="teens">Teens 11–18</option>
-      </select>
-    </div>
+      <ul class="nav-links subpage-nav" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a class="active" href="prog.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="business.html">Businesses</a></li>
+        <li><a href="citations.html">References</a></li>
+        <li><a href="submit.html" class="btn nav-btn">Submit a Resource</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <p class="prog-count" id="progCount">Showing 0 programs</p>
-  </section>
-
-  <!-- KIDS -->
-  <section class="prog-section" data-group="kids">
-    <div class="section-head">
-      <h2>Kids 5–10</h2>
-      <p>Community programs and clubs for children ages 5–10</p>
-    </div>
-
-    <div class="prog-grid">
-
-      <article class="prog-card" data-name="club 1" data-group="kids" data-tags="sports teamwork">
-        <img src="TSA-WEBMASTER2026/assets/images/placeholder.jpg" alt="Club 1 image" />
-        <div class="prog-body">
-          <div class="prog-top">
-            <h3>Club 1</h3>
-            <span class="prog-pill">Kids</span>
-          </div>
-
-          <p class="prog-summary">Placeholder information about Club 1. Click to learn more.</p>
-
-          <button class="toggle-btn" type="button">View Details</button>
-          <div class="details hidden">
-            <p>Schedule, location, eligibility, and how to register.</p>
-            <ul class="prog-meta">
-              <li><strong>Days:</strong> Mon/Wed</li>
-              <li><strong>Time:</strong> 4:00–5:00 PM</li>
-              <li><strong>Location:</strong> Community Center</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="prog-card" data-name="club 2" data-group="kids" data-tags="art creativity">
-        <img src="TSA-WEBMASTER2026/assets/images/placeholder.jpg" alt="Club 2 image" />
-        <div class="prog-body">
-          <div class="prog-top">
-            <h3>Club 2</h3>
-            <span class="prog-pill">Kids</span>
-          </div>
-
-          <p class="prog-summary">Placeholder information about Club 2. Click to learn more.</p>
-
-          <button class="toggle-btn" type="button">View Details</button>
-          <div class="details hidden">
-            <p>Expanded description including resources, volunteer opportunities, and contact info.</p>
-            <ul class="prog-meta">
-              <li><strong>Days:</strong> Tue/Thu</li>
-              <li><strong>Time:</strong> 5:00–6:00 PM</li>
-              <li><strong>Location:</strong> Library Room B</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
+  <!-- HERO -->
+  <section class="sub-hero programs-hero">
+    <div class="container">
+      <p class="eyebrow">Educational & Community Opportunities</p>
+      <h1>Programs</h1>
+      <p class="sub-hero-text">
+        Explore local programs for students of different ages, interests, and goals.
+        Use the search bar and tags below to quickly find the best fit.
+      </p>
     </div>
   </section>
 
-  <!-- TEENS -->
-  <section class="prog-section" data-group="teens">
-    <div class="section-head">
-      <h2>Teens 11–18</h2>
-      <p>Community programs and clubs for teenagers ages 11–18</p>
-    </div>
-
-    <div class="prog-grid">
-
-      <article class="prog-card" data-name="teen club 1" data-group="teens" data-tags="stem coding">
-        <img src="TSA-WEBMASTER2026/assets/images/placeholder.jpg" alt="Teen Club 1 image" />
-        <div class="prog-body">
-          <div class="prog-top">
-            <h3>Teen Club 1</h3>
-            <span class="prog-pill">Teens</span>
-          </div>
-
-          <p class="prog-summary">Placeholder information about Teen Club 1. Click to learn more.</p>
-
-          <button class="toggle-btn" type="button">View Details</button>
-          <div class="details hidden">
-            <p>Schedule, location, eligibility, and how to register.</p>
-            <ul class="prog-meta">
-              <li><strong>Days:</strong> Fridays</li>
-              <li><strong>Time:</strong> 6:00–7:30 PM</li>
-              <li><strong>Location:</strong> Tech Lab</li>
-            </ul>
-          </div>
+  <!-- FILTERS -->
+  <section class="program-controls-wrap">
+    <div class="container">
+      <div class="program-controls">
+        <div class="program-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search by program name, organization, age group, focus, or description..."
+          />
         </div>
-      </article>
 
-      <article class="prog-card" data-name="teen club 2" data-group="teens" data-tags="music performance">
-        <img src="TSA-WEBMASTER2026/assets/images/placeholder.jpg" alt="Teen Club 2 image" />
-        <div class="prog-body">
-          <div class="prog-top">
-            <h3>Teen Club 2</h3>
-            <span class="prog-pill">Teens</span>
-          </div>
-
-          <p class="prog-summary">Placeholder information about Teen Club 2. Click to learn more.</p>
-
-          <button class="toggle-btn" type="button">View Details</button>
-          <div class="details hidden">
-            <p>Expanded description including resources, volunteer opportunities, and contact info.</p>
-            <ul class="prog-meta">
-              <li><strong>Days:</strong> Sat</li>
-              <li><strong>Time:</strong> 2:00–4:00 PM</li>
-              <li><strong>Location:</strong> Auditorium</li>
-            </ul>
-          </div>
+        <div class="program-tag-row" id="tagFilters">
+          <button class="tag-btn active" data-filter="all">All</button>
+          <button class="tag-btn" data-filter="elementary">Elementary</button>
+          <button class="tag-btn" data-filter="teen">Teen</button>
+          <button class="tag-btn" data-filter="sports">Sports</button>
+          <button class="tag-btn" data-filter="arts">Arts</button>
+          <button class="tag-btn" data-filter="stem">STEM</button>
+          <button class="tag-btn" data-filter="literacy">Literacy</button>
+          <button class="tag-btn" data-filter="leadership">Leadership</button>
+          <button class="tag-btn" data-filter="adult">Adult</button>
+          <button class="tag-btn" data-filter="senior">Senior</button>
+          <button class="tag-btn" data-filter="wellness">Wellness</button>
+          <button class="tag-btn" data-filter="education">Education</button>
+          <button class="tag-btn" data-filter="social">Social</button>
         </div>
-      </article>
 
-      <article class="prog-card" data-name="teen club 3" data-group="teens" data-tags="leadership service">
-        <img src="TSA-WEBMASTER2026/assets/images/placeholder.jpg" alt="Teen Club 3 image" />
-        <div class="prog-body">
-          <div class="prog-top">
-            <h3>Teen Club 3</h3>
-            <span class="prog-pill">Teens</span>
-          </div>
-
-          <p class="prog-summary">Placeholder information about Teen Club 3. Click to learn more.</p>
-
-          <button class="toggle-btn" type="button">View Details</button>
-          <div class="details hidden">
-            <p>Expanded description including resources, volunteer opportunities, and contact info.</p>
-            <ul class="prog-meta">
-              <li><strong>Days:</strong> Wed</li>
-              <li><strong>Time:</strong> 5:30–7:00 PM</li>
-              <li><strong>Location:</strong> Room 101</li>
-            </ul>
-          </div>
+        <div class="program-meta">
+          <p id="resultsCount">Showing 0 programs</p>
         </div>
-      </article>
-
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2026 Community Connect</p>
+  <!-- PROGRAMS DIRECTORY -->
+  <main class="programs-section section">
+    <div class="container">
+
+      <section class="program-group">
+        <div class="group-heading">
+          <span class="paw">🐾</span>
+          <h2>Programs Offered  <span>(all ages and interests)</span></h2>
+          <span class="paw">🐾</span>
+        </div>
+
+        <div class="program-grid" id="resourceGrid">
+
+          <!-- Card 1 -->
+          <article
+            class="program-card"
+            data-tags="elementary literacy library reading early-learning creativity"
+          >
+            <img src="assets/placeholder.jpg" alt="Children's library reading area" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Elementary</span>
+                <span class="program-chip">Literacy</span>
+              </div>
+              <h3>Storytime & Early Learning</h3>
+              <p class="program-org">Fort Worth Public Library</p>
+              <p>
+                Weekly themed storytime, early literacy activities, crafts, and
+                read-aloud sessions for young children.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Reading skills, creativity, social development.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="program-card"
+            data-tags="elementary sports swim health confidence physical activity"
+          >
+            <img src="assets/placeholder.jpg" alt="Children participating in swim lessons" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Elementary</span>
+                <span class="program-chip">Sports</span>
+              </div>
+              <h3>Youth Swim Lessons</h3>
+              <p class="program-org">Sigma Swim Fort Worth</p>
+              <p>
+                Beginner and intermediate swim classes that help students grow
+                stronger and more confident in the water.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Water safety, confidence, physical activity.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="program-card"
+            data-tags="elementary sports ymca teamwork fitness recreation"
+          >
+            <img src="assets/placeholder.jpg" alt="Children playing in a youth sports program" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Elementary</span>
+                <span class="program-chip">Sports</span>
+              </div>
+              <h3>Youth Sports</h3>
+              <p class="program-org">YMCA of Metropolitan Fort Worth</p>
+              <p>
+                Basketball, soccer, flag football, and cheer programs designed
+                to encourage movement and teamwork.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Teamwork, fitness, character development.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="program-card"
+            data-tags="elementary stem science museum creativity hands-on learning"
+          >
+            <img src="assets/placeholder.jpg" alt="Children's science museum exhibit" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Elementary</span>
+                <span class="program-chip">STEM</span>
+              </div>
+              <h3>Kids' Workshops</h3>
+              <p class="program-org">Fort Worth Museum of Science & History</p>
+              <p>
+                Hands-on STEM activities, science labs, and creative workshops
+                for children ages 5–10.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> STEM exploration, curiosity, problem-solving.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article
+            class="program-card"
+            data-tags="teen leadership college readiness mentoring education"
+          >
+            <img src="assets/placeholder.jpg" alt="Teens participating in a leadership workshop" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Teen</span>
+                <span class="program-chip">Leadership</span>
+              </div>
+              <h3>Student Leadership Academy</h3>
+              <p class="program-org">Local Youth Leadership Initiative</p>
+              <p>
+                Workshops and team-based activities that help teens develop
+                leadership, communication, and service skills.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Leadership, public speaking, confidence.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article
+            class="program-card"
+            data-tags="teen stem coding technology computer science robotics"
+          >
+            <img src="assets/placeholder.jpg" alt="Teen students working on coding projects" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Teen</span>
+                <span class="program-chip">STEM</span>
+              </div>
+              <h3>Coding & Tech Club</h3>
+              <p class="program-org">Community Technology Lab</p>
+              <p>
+                Students explore coding, problem-solving, and digital tools
+                through guided projects and collaboration.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Computer science, creativity, teamwork.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article
+            class="program-card"
+            data-tags="teen arts music creativity performance"
+          >
+            <img src="assets/placeholder.jpg" alt="Teen arts or music workshop" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Teen</span>
+                <span class="program-chip">Arts</span>
+              </div>
+              <h3>Creative Arts Workshop</h3>
+              <p class="program-org">Community Arts Center</p>
+              <p>
+                A place for students to explore visual arts, design, music, and
+                creative expression through guided workshops.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Creativity, collaboration, artistic growth.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article
+            class="program-card"
+            data-tags="teen literacy tutoring homework academic support"
+          >
+            <img src="assets/placeholder.jpg" alt="Students receiving tutoring support" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Teen</span>
+                <span class="program-chip">Literacy</span>
+              </div>
+              <h3>Homework & Tutoring Support</h3>
+              <p class="program-org">Neighborhood Learning Center</p>
+              <p>
+                After-school tutoring and academic help sessions for students
+                who want support in reading, writing, and school success.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Academic growth, confidence, study skills.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+
+                    <!-- ADULT 1 -->
+          <article
+            class="program-card"
+            data-tags="adult literacy education library clubs writing reading community"
+          >
+            <img src="assets/placeholder.jpg" alt="Adults participating in a library discussion or workshop" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Adult</span>
+                <span class="program-chip">Education</span>
+              </div>
+              <h3>Adult Library Clubs</h3>
+              <p class="program-org">Fort Worth Public Library</p>
+              <p>
+                Join adult book clubs, writing groups, hobby clubs, and community learning
+                events offered through local Fort Worth library locations.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Reading, hobbies, social connection, lifelong learning.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- ADULT 2 -->
+          <article
+            class="program-card"
+            data-tags="adult wellness fitness ymca exercise health recreation"
+          >
+            <img src="assets/placeholder.jpg" alt="Adults participating in a fitness or wellness class" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Adult</span>
+                <span class="program-chip">Wellness</span>
+              </div>
+              <h3>Adult Fitness Classes</h3>
+              <p class="program-org">YMCA of Fort Worth</p>
+              <p>
+                Explore group exercise, healthy living programs, and fitness opportunities
+                designed to help adults stay active and connected.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Health, movement, wellness, community support.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- ADULT 3 -->
+          <article
+            class="program-card"
+            data-tags="adult retirement education financial literacy planning workshop"
+          >
+            <img src="assets/placeholder.jpg" alt="Adults in a retirement planning or educational workshop" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Adult</span>
+                <span class="program-chip">Workshop</span>
+              </div>
+              <h3>Retirement Education Workshops</h3>
+              <p class="program-org">Fort Worth Public Library</p>
+              <p>
+                Free educational classes that introduce retirement planning topics and
+                answer common questions for adults preparing for the future.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Financial awareness, planning, lifelong learning.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- SENIOR 1 -->
+          <article
+            class="program-card"
+            data-tags="senior older adults social club community center best years"
+          >
+            <img src="assets/placeholder.jpg" alt="Senior citizens socializing in a community center" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Senior</span>
+                <span class="program-chip">Social</span>
+              </div>
+              <h3>Best Years Club</h3>
+              <p class="program-org">Fort Worth Community Centers</p>
+              <p>
+                Senior-focused community center programming that encourages socializing,
+                activities, and active engagement for older adults.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Social connection, recreation, community involvement.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- SENIOR 2 -->
+          <article
+            class="program-card"
+            data-tags="senior fitness wellness active older adult exercise"
+          >
+            <img src="assets/placeholder.jpg" alt="Older adults participating in light fitness or wellness activity" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Senior</span>
+                <span class="program-chip">Wellness</span>
+              </div>
+              <h3>Active Older Adult Programs</h3>
+              <p class="program-org">Eugene McCray Community Center</p>
+              <p>
+                Programs for adults 60+ that may include table games, lunch gatherings,
+                educational sessions, and fitness activities in a welcoming setting.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Wellness, activity, friendship, enrichment.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+          <!-- SENIOR 3 -->
+          <article
+            class="program-card"
+            data-tags="senior arts crafts hobbies library community"
+          >
+            <img src="assets/placeholder.jpg" alt="Older adults doing crafts or community hobbies together" />
+            <div class="program-card-content">
+              <div class="program-chip-row">
+                <span class="program-chip">Senior</span>
+                <span class="program-chip">Arts & Crafts</span>
+              </div>
+              <h3>Senior Arts & Hobby Programs</h3>
+              <p class="program-org">Fort Worth Public Library / Community Programs</p>
+              <p>
+                Creative programs give older adults a chance to socialize, make art,
+                enjoy hobbies, and stay engaged in a welcoming environment.
+              </p>
+              <p class="focus-line"><strong>Focus:</strong> Creativity, memory, social connection, enrichment.</p>
+              <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta section">
+    <div class="container cta-box">
+      <div>
+        <p class="eyebrow">Expand the Directory</p>
+        <h2>Know a Program We Should Add?</h2>
+        <p>
+          Share a trusted youth, educational, or community program to help more
+          students discover local opportunities.
+        </p>
+      </div>
+      <a href="submit.html" class="btn primary-btn">Submit a Program</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p><i class="fa-regular fa-envelope"></i> community@harmonyhub.org</p>
+        <p><i class="fa-solid fa-phone"></i> (817) 555-0147</p>
+      </div>
+
+      <div>
+        <h3>Follow Along</h3>
+        <p><i class="fa-brands fa-instagram"></i> @harmonycommunityhub</p>
+        <p><i class="fa-brands fa-facebook"></i> Harmony Community Hub</p>
+      </div>
+
+      <div>
+        <h3>Suggestions?</h3>
+        <p>
+          We would love to hear ideas that can improve the site and better
+          support our community.
+        </p>
+      </div>
+    </div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script src="js/prog.js"></script>
 </body>
 </html>

@@ -1,66 +1,59 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("search");
-  const ageFilter = document.getElementById("ageFilter");
-  const countEl = document.getElementById("progCount");
+const searchInput = document.getElementById("searchInput");
+const tagButtons = document.querySelectorAll(".tag-btn");
+const cards = document.querySelectorAll(".program-card");
+const resultsCount = document.getElementById("resultsCount");
 
-  const cards = Array.from(document.querySelectorAll(".prog-card"));
-  const sections = Array.from(document.querySelectorAll(".prog-section"));
+let activeTag = "all";
 
-  // Toggle details (event delegation)
-  document.body.addEventListener("click", (e) => {
-    const btn = e.target.closest(".toggle-btn");
-    if (!btn) return;
+function filterPrograms() {
+  const searchTerm = searchInput.value.trim().toLowerCase();
+  let visibleCount = 0;
 
-    const card = btn.closest(".prog-card");
-    if (!card) return;
+  cards.forEach((card) => {
+    const cardText = card.innerText.toLowerCase();
+    const tags = (card.dataset.tags || "").toLowerCase();
 
-    const details = card.querySelector(".details");
-    if (!details) return;
+    const matchesSearch = cardText.includes(searchTerm);
+    const matchesTag =
+      activeTag === "all" || tags.includes(activeTag.toLowerCase());
 
-    const isHidden = details.classList.contains("hidden");
-    details.classList.toggle("hidden");
-
-    btn.textContent = isHidden ? "Hide Details" : "View Details";
+    if (matchesSearch && matchesTag) {
+      card.classList.remove("hidden");
+      visibleCount++;
+    } else {
+      card.classList.add("hidden");
+    }
   });
 
-  function matchesSearch(card, q) {
-    if (!q) return true;
-    const text = [
-      card.dataset.name || "",
-      card.dataset.tags || "",
-      card.textContent || ""
-    ].join(" ").toLowerCase();
-    return text.includes(q);
+  resultsCount.textContent = `Showing ${visibleCount} program${visibleCount === 1 ? "" : "s"}`;
+
+  updateNoResultsMessage(visibleCount);
+}
+
+function updateNoResultsMessage(count) {
+  let existingMessage = document.querySelector(".no-results-message");
+
+  if (count === 0) {
+    if (!existingMessage) {
+      const message = document.createElement("p");
+      message.className = "no-results-message";
+      message.textContent = "No programs match your current search or filter.";
+      document.getElementById("resourceGrid").after(message);
+    }
+  } else if (existingMessage) {
+    existingMessage.remove();
   }
+}
 
-  function matchesAge(card, age) {
-    if (age === "all") return true;
-    return (card.dataset.group || "") === age;
-  }
-
-  function applyFilters() {
-    const q = searchInput.value.trim().toLowerCase();
-    const age = ageFilter.value;
-
-    let visibleCount = 0;
-
-    cards.forEach(card => {
-      const ok = matchesSearch(card, q) && matchesAge(card, age);
-      card.style.display = ok ? "" : "none";
-      if (ok) visibleCount++;
-    });
-
-    sections.forEach(sec => {
-      const group = sec.dataset.group;
-      const anyVisible = cards.some(c => c.dataset.group === group && c.style.display !== "none");
-      sec.style.display = anyVisible ? "" : "none";
-    });
-
-    countEl.textContent = `Showing ${visibleCount} programs`;
-  }
-
-  searchInput.addEventListener("input", applyFilters);
-  ageFilter.addEventListener("change", applyFilters);
-
-  applyFilters();
+tagButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    tagButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+    activeTag = button.dataset.filter;
+    filterPrograms();
+  });
 });
+
+searchInput.addEventListener("input", filterPrograms);
+
+filterPrograms();

@@ -1,35 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Businesses | Community Connect</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Businesses | Harmony Community Hub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/stylesv2.css" />
 </head>
 <body>
-    
-    <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Community Connect</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="prog.html">Programs</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="business.html">Businesses</a></li>
-      <li><a href="citations.html">References</a></li>
-      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
 
-    </ul>
-  </nav>
+  <header class="subpage-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo dark-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Harmony Community Hub</span>
+      </a>
 
-    <section class="page-header">
-        <h1>Local Businesses</h1>
-        <p>Discover local businesses that support our community.</p>
-    </section>
+      <button class="menu-toggle dark-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <main class="content">
-        <!-- Business cards will go here -->
-    </main>
+      <ul class="nav-links subpage-nav" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="prog.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a class="active" href="business.html">Businesses</a></li>
+        <li><a href="citations.html">References</a></li>
+        <li><a href="submit.html" class="btn nav-btn">Submit a Resource</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="sub-hero">
+    <div class="container">
+      <p class="eyebrow">Local Fort Worth Favorites</p>
+      <h1>Businesses</h1>
+      <p class="sub-hero-text">
+        Explore small businesses, food spots, and neighborhood favorites that help make Fort Worth unique.
+      </p>
+    </div>
+  </section>
+
+  <section class="business-controls-wrap">
+    <div class="container">
+      <div class="business-controls">
+        <div class="business-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            id="businessSearch"
+            type="text"
+            placeholder="Search by business name, type, or description..."
+          />
+        </div>
+
+        <div class="business-tag-row">
+          <button class="business-tag active" data-filter="all">All</button>
+          <button class="business-tag" data-filter="food truck">Food Truck</button>
+          <button class="business-tag" data-filter="restaurant">Restaurant</button>
+          <button class="business-tag" data-filter="bookstore">Bookstore</button>
+          <button class="business-tag" data-filter="tea house">Tea House</button>
+          <button class="business-tag" data-filter="local favorite">Local Favorite</button>
+        </div>
+
+        <p id="businessCount" class="business-count">Showing 0 businesses</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="businesses-section">
+    <div class="container">
+      <div id="businessList" class="business-list"></div>
+      <p id="businessEmpty" class="business-empty hidden">No businesses match your current search.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p><i class="fa-regular fa-envelope"></i> community@harmonyhub.org</p>
+        <p><i class="fa-solid fa-phone"></i> (817) 555-0147</p>
+      </div>
+
+      <div>
+        <h3>Follow Along</h3>
+        <p><i class="fa-brands fa-instagram"></i> @harmonycommunityhub</p>
+        <p><i class="fa-brands fa-facebook"></i> Harmony Community Hub</p>
+      </div>
+
+      <div>
+        <h3>Suggestions?</h3>
+        <p>We would love to hear ideas that can improve the site and better support our community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/business.js"></script>
 </body>
 </html>

@@ -2,83 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Events | Community Connect</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer | Harmony Community Hub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/stylesv2.css" />
 </head>
 <body>
 
-    <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Community Connect</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="prog.html">Programs</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="business.html">Businesses</a></li>
-      <li><a href="citations.html">References</a></li>
-      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
+  <!-- HEADER -->
+  <header class="subpage-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo dark-logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Harmony Community Hub</span>
+      </a>
 
-    </ul>
-  </nav>
+      <button class="menu-toggle dark-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  <section class="page-header">
-    <h1>Community Events Calendar</h1>
-    <p>Click a highlighted date to view event details.</p>
-  </section>
+      <ul class="nav-links subpage-nav" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="prog.html">Programs</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="business.html">Businesses</a></li>
+        <li><a href="citations.html">References</a></li>
+        <li><a href="submit.html" class="btn nav-btn">Submit a Resource</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="content">
-    <div class="events-layout">
+<section class="content events-content">
+  <div class="events-layout">
 
-      <!-- Calendar -->
-      <div class="calendar-card">
+    <!-- Calendar -->
+    <div class="calendar-card">
+      <div class="calendar-toolbar">
         <div class="calendar-header">
           <button class="cal-btn" id="prevMonth" aria-label="Previous month">‹</button>
           <h2 id="monthLabel">Month YYYY</h2>
           <button class="cal-btn" id="nextMonth" aria-label="Next month">›</button>
         </div>
 
-        <div class="calendar-weekdays">
-          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        <button class="today-btn" id="todayBtn" type="button">Today</button>
+      </div>
+
+      <div class="calendar-weekdays">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+
+      <div class="calendar-grid" id="calendarGrid"></div>
+
+      <div class="calendar-legend">
+        <span class="legend-item"><span class="legend-dot"></span> Dates with events</span>
+        <span class="legend-item"><span class="legend-dot selected-dot"></span> Selected date</span>
+      </div>
+    </div>
+
+    <!-- Details Panel -->
+    <aside class="event-details-card" aria-live="polite">
+      <h2>Find Events</h2>
+
+      <div class="event-tools">
+        <div class="event-search-wrap">
+          <input id="eventSearch" type="text" placeholder="Search by title, tag, location..." />
         </div>
 
-        <div class="calendar-grid" id="calendarGrid"></div>
-
-        <div class="calendar-legend">
-          <span class="legend-dot"></span>
-          <span>Dates with events</span>
+        <div class="event-filter-wrap">
+          <select id="eventTagFilter">
+            <option value="all">All Categories</option>
+            <option value="Family-Friendly">Family-Friendly</option>
+            <option value="Arts">Arts</option>
+            <option value="Museum">Museum</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Sports">Sports</option>
+            <option value="Festival">Festival</option>
+            <option value="Western">Western</option>
+            <option value="Free">Free</option>
+          </select>
         </div>
       </div>
 
-      <!-- Details Panel -->
-      <aside class="event-details-card" aria-live="polite">
-        <h2>Event Details</h2>
-        <p class="muted">Select a date with an event to view information.</p>
+      <p class="muted" id="selectionMessage">Select a date with an event to view information.</p>
 
-        <div id="eventDetails" class="hidden">
-          <div class="tag-row" id="eventTags"></div>
-          <h3 id="eventTitle"></h3>
-          <p id="eventDesc"></p>
+      <div id="eventDetails" class="hidden">
+        <h3 class="date-heading" id="selectedDateHeading"></h3>
+        <div id="eventList"></div>
+      </div>
 
-          <ul class="event-meta">
-            <li><strong>Date:</strong> <span id="eventDate"></span></li>
-            <li><strong>Time:</strong> <span id="eventTime"></span></li>
-            <li><strong>Location:</strong> <span id="eventLocation"></span></li>
-            <li><strong>Cost:</strong> <span id="eventCost"></span></li>
-          </ul>
+      <div class="upcoming-block">
+        <h3>Upcoming This Month</h3>
+        <div id="upcomingList" class="upcoming-list"></div>
+      </div>
+    </aside>
 
-          <a id="eventLink" class="details-link" href="#" target="_blank" rel="noreferrer">More Info →</a>
-        </div>
-      </aside>
-
-    </div>
-  </section>
+  </div>
+</section>
 
   <footer>
-    &copy; 2026 Community Connect
+    &copy; 2026 Harmony Community Hub
   </footer>
 
   <script src="js/events.js"></script>
-</body>
-</html>

@@ -1,149 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Community Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony Community Hub</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="css/stylesv2.css" />
 </head>
 <body>
 
-    <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Community Connect</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="prog.html">Programs</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="business.html">Businesses</a></li>
-      <li><a href="citations.html">References</a></li>
-      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Harmony Community Hub</span>
+      </a>
 
-    </ul>
-  </nav>
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero h1">
-      <h1>Welcome to Community Connect</h1>
-      <p>Your comprehensive guide to local resources, support services, and programs.</p>
-      <div class="hero-buttons">
-        <a href="#resources" class="btn primary">Explore Resources</a>
-        <a href="prog.html" class="btn secondary">Featured Programs</a>
-      </div>
-    </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="prog.html">Programs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="business.html">Businesses</a></li>
+        <li><a href="citations.html">References</a></li>
+        <li><a href="submit.html" class="btn nav-btn">Submit a Resource</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- STATS -->
-  <section class="stats">
-    <div class="stat">
-      <h2>10+</h2>
-      <p>Resource Categories</p>
-    </div>
-    <div class="stat">
-      <h2>10,000+</h2>
-      <p>Residents Helped</p>
-    </div>
-    <div class="stat">
-      <h2>50+</h2>
-      <p>Partner Organizations</p>
-    </div>
-  </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
 
-  <!-- RESOURCE CATEGORIES -->
-  <section id="resources" class="section">
-    <h2>Explore Community Resources</h2>
-    <div class="card-grid">
+    <div class="hero-content container">
+      <p class="hero-kicker">Service • Opportunity • Community</p>
+      <h1>
+        Many Paths, One Community,
+        <span>Growing Strong Together</span>
+      </h1>
+      <p class="hero-subtext">
+        Connecting students with opportunities to serve, explore, and make a
+        meaningful difference in their communities.
+      </p>
 
-      <div class="card">
-        <h3>Food Assistance</h3>
-        <p>Access food banks, meal programs, and nutrition services.</p>
-        <a href="#">Learn More</a>
+      <div class="hero-buttons">
+        <a href="volunteer.html" class="btn primary-btn">Explore Opportunities</a>
+        <a href="prog.html" class="btn secondary-btn">View Programs</a>
       </div>
-
-      <div class="card">
-        <h3>Volunteer</h3>
-        <p>Find opportunities to support your local community.</p>
-        <a href="#">Get Involved</a>
-      </div>
-
-      <div class="card">
-        <h3>Local Services</h3>
-        <p>Discover healthcare, housing, and financial support.</p>
-        <a href="#">Browse Services</a>
-      </div>
-
-      <div class="card">
-        <h3>Events</h3>
-        <p>Stay informed about upcoming programs and outreach events.</p>
-        <a href="#">View Events</a>
-      </div>
-
     </div>
   </section>
 
-  <!-- FEATURED RESOURCES -->
-  <section id="featured" class="section light">
-    <h2>Featured Resources</h2>
-    <div class="featured-grid">
-
-      <div class="featured-card">
-        <img src="assets/food.jpg" alt="Food Bank">
-        <div class="featured-content">
-          <h3>Community Food Bank</h3>
-          <p>Providing nutritious food assistance to families in need.</p>
-          <a href="#">Learn More</a>
-        </div>
-      </div>
-
-      <div class="featured-card">
-        <img src="assets/housing.jpg" alt="Housing Services">
-        <div class="featured-content">
-          <h3>Hope Housing Services</h3>
-          <p>Affordable housing and rental support resources.</p>
-          <a href="#">Learn More</a>
-        </div>
-      </div>
-
-      <div class="featured-card">
-        <img src="assets/health.jpg" alt="Health Clinic">
-        <div class="featured-content">
-          <h3>Family Health Clinic</h3>
-          <p>Accessible healthcare services for all residents.</p>
-          <a href="#">Learn More</a>
-        </div>
-      </div>
-
+  <!-- WELCOME STRIP -->
+  <section class="welcome-strip">
+    <div class="container">
+      <div class="welcome-pill">Welcome to the Harmony Community Page, Tigers!</div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="section">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="circle">1</div>
-        <h4>Search Resources</h4>
-        <p>Browse available services by category.</p>
+  <!-- MISSION -->
+  <section class="mission section">
+    <div class="container">
+      <h2 class="section-title">Here, We Strive To...</h2>
+
+      <div class="mission-grid">
+        <article class="mission-card">
+          <div class="icon-wrap">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Connect With Others</h3>
+          <p>
+            Bring students, organizations, and local leaders together to build
+            stronger relationships and a more united community.
+          </p>
+        </article>
+
+        <article class="mission-card">
+          <div class="icon-wrap">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>Learn Beyond the Classroom</h3>
+          <p>
+            Encourage real-world experiences that build skills, confidence, and
+            lasting knowledge through active involvement.
+          </p>
+        </article>
+
+        <article class="mission-card">
+          <div class="icon-wrap">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3>Make an Impact</h3>
+          <p>
+            Inspire students to contribute to their community and create
+            positive change through service and outreach.
+          </p>
+        </article>
       </div>
-      <div class="step">
-        <div class="circle">2</div>
-        <h4>Get Details</h4>
-        <p>View contact information and eligibility.</p>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT -->
+  <section class="spotlight section">
+    <div class="container spotlight-grid">
+      <div class="spotlight-image">
+        <img src="assets/spotlight-volunteer.jpg" alt="Students volunteering together at a community event" />
       </div>
-      <div class="step">
-        <div class="circle">3</div>
-        <h4>Connect</h4>
-        <p>Reach out directly to the organization.</p>
+
+      <div class="spotlight-content">
+        <p class="eyebrow">Featured Story</p>
+        <h2 class="section-title left">Community Spotlight</h2>
+        <p>
+          Our community grows when students step forward to serve. From
+          volunteering at local events to supporting neighborhood programs,
+          every effort helps strengthen connections and create real change.
+        </p>
+        <p>
+          This page highlights opportunities that help students build
+          leadership, explore their interests, and make a difference beyond the
+          classroom.
+        </p>
+
+        <div class="spotlight-stats">
+          <div>
+            <strong>20+</strong>
+            <span>Volunteer ideas</span>
+          </div>
+          <div>
+            <strong>10+</strong>
+            <span>Program categories</span>
+          </div>
+          <div>
+            <strong>Local</strong>
+            <span>Community focused</span>
+          </div>
+        </div>
+
+        <a href="events.html" class="text-link">
+          See upcoming opportunities <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="quick-links section">
+    <div class="container">
+      <h2 class="section-title">Quick Access</h2>
+
+      <div class="quick-grid">
+        <a href="volunteer.html" class="quick-card">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <h3>Volunteer</h3>
+          <p>Find ways to get involved and give back.</p>
+        </a>
+
+        <a href="prog.html" class="quick-card">
+          <i class="fa-solid fa-book-open-reader"></i>
+          <h3>Programs</h3>
+          <p>Explore youth, school, and community programs.</p>
+        </a>
+
+        <a href="events.html" class="quick-card">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h3>Events</h3>
+          <p>Stay updated on community activities and dates.</p>
+        </a>
+
+        <a href="business.html" class="quick-card">
+          <i class="fa-solid fa-store"></i>
+          <h3>Businesses</h3>
+          <p>Support local organizations and partners.</p>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta">
-    <h2>Know a Resource We Should List?</h2>
-    <a href="submit.html" class="btn primary">Submit a Resource</a>
+  <section class="cta section">
+    <div class="container cta-box">
+      <div>
+        <p class="eyebrow">Get Involved</p>
+        <h2>Know a Resource We Should Feature?</h2>
+        <p>
+          Help us grow this hub by submitting a program, event, business, or
+          community service opportunity.
+        </p>
+      </div>
+      <a href="submit.html" class="btn primary-btn">Submit a Resource</a>
+    </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p><i class="fa-regular fa-envelope"></i> community@harmonyhub.org</p>
+        <p><i class="fa-solid fa-phone"></i> (817) 555-0147</p>
+      </div>
+
+      <div>
+        <h3>Follow Along</h3>
+        <p><i class="fa-brands fa-instagram"></i> @harmonycommunityhub</p>
+        <p><i class="fa-brands fa-facebook"></i> Harmony Community Hub</p>
+      </div>
+
+      <div>
+        <h3>Suggestions?</h3>
+        <p>
+          We would love to hear ideas that can improve the site and better
+          support our community.
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
