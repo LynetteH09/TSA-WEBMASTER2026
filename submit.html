@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit a Resource</title>
+  <link rel="stylesheet" href="TSA-WEBMASTER2026/css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Community Connect</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="prog.html">Programs</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="business.html">Businesses</a></li>
+      <li><a href="citations.html">References</a></li>
+      <li><a href="submit.html" class="btn primary-btn">Submit a Resource</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Submit a Community Resource</h1>
+    <p>Help us expand our database of verified local services.</p>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="content">
+    <div class="submit-card">
+
+      <form id="resourceForm">
+
+        <label>Organization Name</label>
+        <input type="text" required>
+
+        <label>Category</label>
+        <input type="text" required>
+
+        <label>Description</label>
+        <textarea required></textarea>
+
+        <label>Website / Contact Information</label>
+        <input type="text">
+
+        <button type="submit" class="toggle-btn">
+          Submit Resource
+        </button>
+
+      </form>
+
+      <p id="successMessage" class="hidden success-msg">
+        Thank you! Your submission has been received.
+      </p>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Community Connect
+  </footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
