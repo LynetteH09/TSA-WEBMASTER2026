@@ -116,25 +116,38 @@
   </section>
 
   <!-- SPOTLIGHT -->
-  <section class="spotlight section">
-    <div class="container spotlight-grid">
-      <div class="spotlight-image">
-        <img src="assets/spotlight-volunteer.jpg" alt="Students volunteering together at a community event" />
+  <!-- COMMUNITY SPOTLIGHT -->
+<section class="homepage-spotlight section">
+  <div class="container">
+    <div class="spotlight-header">
+      <p class="eyebrow">Featured Resources</p>
+      <h2 class="section-title">Community Spotlight</h2>
+      <p class="spotlight-subtext">
+        Explore a few highlighted opportunities and local favorites from across our site.
+      </p>
+    </div>
+
+    <div class="spotlight-carousel-wrap">
+      <button class="spotlight-arrow left" id="spotlightPrev" aria-label="Previous spotlight">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="spotlight-carousel" id="spotlightCarousel">
+        <!-- JS inserts spotlight cards here -->
       </div>
 
-      <div class="spotlight-content">
-        <p class="eyebrow">Featured Story</p>
-        <h2 class="section-title left">Community Spotlight</h2>
-        <p>
-          Our community grows when students step forward to serve. From
-          volunteering at local events to supporting neighborhood programs,
-          every effort helps strengthen connections and create real change.
-        </p>
-        <p>
-          This page highlights opportunities that help students build
-          leadership, explore their interests, and make a difference beyond the
-          classroom.
-        </p>
+      <button class="spotlight-arrow right" id="spotlightNext" aria-label="Next spotlight">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="spotlight-dots" id="spotlightDots"></div>
+
+    <div class="spotlight-more-wrap">
+      <a href="prog.html" class="btn primary-btn">Explore More Resources</a>
+    </div>
+  </div>
+</section>
 
         <div class="spotlight-stats">
           <div>
