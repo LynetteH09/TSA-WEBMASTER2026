@@ -62,7 +62,7 @@ if (spotlightCarousel && spotlightDots && spotlightPrev && spotlightNext) {
       org: "Fort Worth Animal Care & Control",
       description:
         "Support pet care, donation organization, and community adoption events through local volunteer service.",
-      image: "assets/animal-shelter.jpg",
+      image: "images/animal-shelter.jpg",
       tags: ["Volunteer", "Community Service"],
       link: "volunteer.html",
       buttonText: "Learn More"
@@ -72,7 +72,7 @@ if (spotlightCarousel && spotlightDots && spotlightPrev && spotlightNext) {
       org: "Fort Worth Public Library",
       description:
         "A literacy-centered program for younger students with stories, crafts, and early learning activities.",
-      image: "assets/library-program.jpg",
+      image: "images/library-storytime.jpg",
       tags: ["Program", "Elementary"],
       link: "prog.html",
       buttonText: "Learn More"
@@ -82,7 +82,7 @@ if (spotlightCarousel && spotlightDots && spotlightPrev && spotlightNext) {
       org: "Near Southside Local Favorite",
       description:
         "A cozy local business that combines books, tea, and community atmosphere in Fort Worth.",
-      image: "assets/placeholder.jpg",
+      image: "images/bookstore-tea.jpg",
       tags: ["Business", "Local Favorite"],
       link: "business.html",
       buttonText: "Learn More"
@@ -92,7 +92,7 @@ if (spotlightCarousel && spotlightDots && spotlightPrev && spotlightNext) {
       org: "Citywide Community Event",
       description:
         "One of Fort Worth’s major annual celebrations with family-friendly activities and community spirit.",
-      image: "assets/community-event.jpg",
+      image: "images/fortworth-fourth.jpg",
       tags: ["Event", "Family-Friendly"],
       link: "events.html",
       buttonText: "Learn More"
