@@ -6,7 +6,7 @@ const businesses = [
       "Authentic Baja-style mariscos served from a family-run Fort Worth spot known for fresh seafood and bold flavor.",
     neighborhood: "East Lancaster / Fort Worth",
     address: "4402 E Lancaster Ave, Fort Worth, TX 76103",
-    image: "assets/placeholder.jpg",
+    image: "images/mariscos.jpg",
     website: "https://www.facebook.com/mariscos.el.cachanillaa/",
     directions: "https://maps.google.com/?q=4402+E+Lancaster+Ave+Fort+Worth+TX+76103"
   },
@@ -17,7 +17,7 @@ const businesses = [
       "A Fort Worth favorite serving handcrafted gourmet hot dogs and street-food style specialties with big flavor.",
     neighborhood: "Fort Worth",
     address: "2836 Stanley Ave, Fort Worth, TX 76110",
-    image: "assets/placeholder.jpg",
+    image: "images/hot-dogs.jpg",
     website: "https://bigdawgsdfw.com/",
     directions: "https://maps.google.com/?q=2836+Stanley+Ave+Fort+Worth+TX+76110"
   },
@@ -28,7 +28,7 @@ const businesses = [
       "A Lebanese food truck serving Mediterranean-inspired dishes across the Dallas–Fort Worth area.",
     neighborhood: "DFW / Fort Worth area",
     address: "See vendor page for current schedule",
-    image: "assets/placeholder.jpg",
+    image: "images/lebanese.jpg",
     website: "https://roaminghunger.com/danibelles-lebanese-cuisine/",
     directions: "https://roaminghunger.com/danibelles-lebanese-cuisine/"
   },
@@ -39,10 +39,32 @@ const businesses = [
       "A cozy Near Southside space combining books, tea, and bakery offerings in a relaxed community setting.",
     neighborhood: "Near Southside",
     address: "120 Saint Louis Ave, Suite 101, Fort Worth, TX 76104",
-    image: "assets/placeholder.jpg",
+    image: "images/bookstore-tea.jpg",
     website: "https://leaves-bakery-and-books.company.site/",
     directions: "https://maps.google.com/?q=120+Saint+Louis+Ave+Suite+101+Fort+Worth+TX+76104"
-  }
+  },
+  {
+  name: "Monkey and Dog Books",
+  type: ["Bookstore", "Local Business", "Community Favorite"],
+  description:
+    "An independent Fort Worth bookstore focused on children’s literature, community events, and creating a welcoming space for readers of all ages.",
+  neighborhood: "West Magnolia / Near Southside",
+  address: "3608 W Magnolia Ave, Fort Worth, TX 76107",
+  image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
+  website: "http://www.monkeyanddogbooks.com",
+  directions: "https://maps.google.com/?q=3608+W+Magnolia+Ave+Fort+Worth+TX+76107"
+},
+{
+  name: "Ampersand",
+  type: ["Coffee Shop", "Cafe", "Local Favorite"],
+  description:
+    "A popular Fort Worth café known for its high-quality coffee, modern aesthetic, and inviting atmosphere perfect for studying, meeting, or relaxing.",
+  neighborhood: "West 7th / Fort Worth",
+  address: "3009 Bledsoe St, Fort Worth, TX 76107",
+  image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
+  website: "https://ampersand.coffee",
+  directions: "https://maps.google.com/?q=3009+Bledsoe+St+Fort+Worth+TX+76107"
+}
 ];
 
 const businessList = document.getElementById("businessList");

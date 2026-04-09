@@ -165,3 +165,17 @@ if (spotlightCarousel && spotlightDots && spotlightPrev && spotlightNext) {
 
   renderSpotlight();
 }
+
+
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const link = card.dataset.link;
+
+    if (link) {
+      window.open(link, "_blank"); // opens in new tab
+    }
+  });
+
+  // makes it feel clickable
+  card.style.cursor = "pointer";
+});
